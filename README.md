@@ -135,6 +135,7 @@ UI strings are translated for English (`en.json`) and Turkish (`tr.json`) under 
 | `ALLOWED_ORIGIN` | Yes, to enable AI | Exact origin allowed to call the endpoint |
 
 If these are unset, the function returns `AI_DISABLED` and the app continues to work fully in its deterministic, local-only mode.
+
 ## Screenshots
 
 ### Landing — Product overview
