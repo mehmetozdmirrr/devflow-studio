@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "requestId": "request-example-001",
+  "analysisId": "analysis-example-001",
+  "classification": {
+    "domainIds": ["domain-web", "domain-ai-ml"],
+    "complexity": "complex",
+    "confidence": 0.88
+  },
+  "clarificationQuestions": [
+    {
+      "id": "question-ai-budget",
+      "question": "What usage limit should protect the public AI endpoint?",
+      "reason": "A public paid endpoint needs an abuse and cost boundary.",
+      "affects": ["security", "architecture"],
+      "requiredBeforeGeneration": false
+    }
+  ],
+  "proposedRequirements": [
+    {
+      "id": "proposal-ai-fallback",
+      "type": "non-functional",
+      "title": "AI-independent core",
+      "description": "All core workflows remain usable when AI is unavailable.",
+      "priority": "must",
+      "reason": "Prevents paid-provider outage from blocking the product."
+    }
+  ],
+  "recommendedItemIds": ["language-typescript", "framework-react", "build-tool-vite"],
+  "customProposals": [],
+  "risks": ["Public AI endpoint abuse"],
+  "testNeeds": ["AI timeout and invalid output fallback"],
+  "documentNeeds": ["AI API contract", "Privacy assessment"],
+  "warnings": ["Recommendations require deterministic catalog validation and user approval."]
+}
+

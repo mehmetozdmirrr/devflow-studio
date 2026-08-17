@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "autoMemoryEnabled": false,
+  "disableAutoMode": "disable",
+  "permissions": {
+    "defaultMode": "plan",
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "PowerShell(git status)",
+      "PowerShell(git diff *)",
+      "PowerShell(git log *)"
+    ],
+    "ask": [
+      "Agent",
+      "WebSearch",
+      "WebFetch",
+      "mcp__*",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(* deploy *)",
+      "Bash(* migrate *)",
+      "PowerShell(git commit *)",
+      "PowerShell(git push *)",
+      "PowerShell(* deploy *)",
+      "PowerShell(* migrate *)"
+    ],
+    "deny": [
+      "Read(.env)",
+      "Read(.env.*)",
+      "Read(**/secrets/**)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Edit(.env)",
+      "Edit(.env.*)",
+      "Edit(**/secrets/**)",
+      "Edit(**/*.pem)",
+      "Edit(**/*.key)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "PowerShell(git push --force *)",
+      "PowerShell(git reset --hard *)"
+    ]
+  }
+}
+

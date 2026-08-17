@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "requestId": "request-example-001",
+  "locale": "tr",
+  "outputLanguage": "en",
+  "consent": {
+    "accepted": true,
+    "acceptedAt": "2026-08-14T12:00:00.000Z",
+    "noticeVersion": "ai-notice-v1"
+  },
+  "project": {
+    "idea": "A web application that generates a project-specific Claude Code kit.",
+    "problem": "Users start AI-assisted projects without complete requirements and safe controls.",
+    "targetUsers": ["Students", "Solo developers"],
+    "selectedDomainIds": ["domain-web", "domain-ai-ml"],
+    "targetPlatforms": ["web"],
+    "experienceProfile": "intermediate",
+    "scale": "mvp",
+    "knownRequirements": [
+      {
+        "type": "functional",
+        "title": "Project CRUD",
+        "description": "Users can create, list, update, and safely delete projects.",
+        "priority": "must"
+      }
+    ]
+  },
+  "catalogContext": {
+    "catalogVersion": "v1",
+    "allowedItemIds": ["language-typescript", "framework-react", "build-tool-vite"]
+  }
+}
+

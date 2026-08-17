@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "generatorVersion": "1.0.0",
+  "projectId": "project-example-001",
+  "projectRevision": 3,
+  "catalogVersion": "v1",
+  "ruleSetVersion": "v1",
+  "templateSetVersion": "v1",
+  "outputLanguage": "en",
+  "selectedItems": [
+    {
+      "itemId": "framework-react",
+      "itemVersion": "1.0.0",
+      "name": "React",
+      "kind": "framework",
+      "verification": "verified"
+    }
+  ],
+  "files": [
+    {
+      "path": "CLAUDE.md",
+      "mediaType": "text/markdown",
+      "contentHash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "source": "core",
+      "inclusionReason": "Required project-wide operating contract."
+    }
+  ],
+  "warnings": []
+}
+

@@ -1,0 +1,754 @@
+{
+  "app": {
+    "name": "DevFlow Studio"
+  },
+  "nav": {
+    "skipToContent": "İçeriğe geç",
+    "projects": "Projeler",
+    "catalog": "Katalog",
+    "compare": "Karşılaştır",
+    "trash": "Çöp Kutusu",
+    "settings": "Ayarlar"
+  },
+  "projectNav": {
+    "label": "Proje gezinmesi",
+    "overview": "Genel Bakış",
+    "configure": "Yapılandır",
+    "aiAnalysis": "Yapay Zeka Analizi",
+    "package": "Paket"
+  },
+  "landing": {
+    "title": "Bir sonraki Claude Code projenizi planlayın, yapılandırın ve paketleyin",
+    "subtitle": "Yığın, ajan ve becerileri seçmek için belirlenimci öncelikli bir çalışma alanı; isteğe bağlı yapay zeka desteğiyle.",
+    "createProject": "Proje oluştur",
+    "browseCatalog": "Kataloğa göz at",
+    "workflow": {
+      "brief": "Proje özeti",
+      "requirements": "Gereksinimler",
+      "recommendations": "Öneriler",
+      "validation": "Doğrulama",
+      "package": "Claude Code paketi",
+      "tags": {
+        "localFirst": "Yerel öncelikli",
+        "deterministic": "Belirlenimci",
+        "optionalAI": "İsteğe bağlı yapay zeka"
+      }
+    },
+    "howItWorks": {
+      "heading": "DevFlow nasıl çalışır",
+      "step1": {
+        "title": "Projeyi tanımlayın",
+        "body": "Fikri, sorunu ve önerilen çözümü sade bir dille kaydedin."
+      },
+      "step2": {
+        "title": "Gereksinimleri yapılandırın",
+        "body": "Uyarlanabilir sihirbazda alanları, platformları ve gereksinimleri belirleyin."
+      },
+      "step3": {
+        "title": "Önerileri gözden geçirin",
+        "body": "Belirlenimci katalog önerilerini kabul edin veya isteğe bağlı yapay zeka analizinden yararlanın."
+      },
+      "step4": {
+        "title": "Paketi oluşturun",
+        "body": "ZIP, manifest veya Markdown paketi olarak kullanıma hazır bir Claude Code paketi dışa aktarın."
+      }
+    },
+    "capabilities": {
+      "heading": "Temel özellikler",
+      "localFirst": {
+        "title": "Yerel öncelikli kalıcılık",
+        "body": "Projeler tarayıcınızın yerel depolamasında saklanır — varsayılan olarak hiçbir veri makinenizden çıkmaz."
+      },
+      "deterministic": {
+        "title": "Belirlenimci öneriler",
+        "body": "Kural tabanlı bir motor, yapay zekaya ihtiyaç duymadan yığın, ajan ve beceri önerir."
+      },
+      "catalog": {
+        "title": "Katalog ve karşılaştırma",
+        "body": "Her proje türü için derlenmiş katalog öğelerine göz atın, filtreleyin ve karşılaştırın."
+      },
+      "optionalAI": {
+        "title": "İsteğe bağlı yapay zeka analizi",
+        "body": "Yalnızca siz seçtiğinizde, açık onayla yapay zeka destekli analiz isteyin."
+      }
+    },
+    "aiExplainer": {
+      "heading": "Belirlenimci öncelikli, yapay zeka isteğe bağlı",
+      "deterministic": {
+        "heading": "Belirlenimci iş akışı",
+        "item1": "Yapay zeka veya API anahtarı olmadan çalışır",
+        "item2": "Yerel öncelikli — verileriniz tarayıcıda kalır",
+        "item3": "Her zaman kullanılabilir, dış bağımlılık yok"
+      },
+      "optionalAI": {
+        "heading": "İsteğe bağlı yapay zeka",
+        "item1": "Açık onayınızı gerektirir",
+        "item2": "Yalnızca sizin işleminizle istenir, otomatik değil",
+        "item3": "Öneriler uygulanmadan önce gözden geçirilir"
+      }
+    },
+    "finalCta": {
+      "heading": "Bir sonraki projenize başlamaya hazır mısınız?",
+      "body": "Fikrinizi tanımlayın, gerisini rehberli sihirbazla yapılandırın."
+    },
+    "footer": {
+      "text": "DevFlow Studio — yerel öncelikli bir Claude Code proje planlama çalışma alanı."
+    }
+  },
+  "common": {
+    "loading": "Yükleniyor…",
+    "emptyTitle": "Henüz bir şey yok",
+    "emptyBody": "Şu anda gösterilecek içerik yok.",
+    "errorTitle": "Bir şeyler ters gitti",
+    "errorBody": "Beklenmeyen bir hata oluştu. Tekrar deneyebilirsiniz.",
+    "retry": "Tekrar dene",
+    "cancel": "Vazgeç",
+    "confirm": "Onayla",
+    "close": "Kapat",
+    "comingSoon": "Yakında",
+    "removeTag": "{{value}} öğesini kaldır",
+    "all": "Tümü"
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "body": "Aradığınız sayfa veya proje mevcut değil ya da kaldırıldı.",
+    "backHome": "Ana sayfaya dön"
+  },
+  "catalog": {
+    "kind": {
+      "domain": "Alan",
+      "subdomain": "Alt alan",
+      "language": "Dil",
+      "framework": "Çatı",
+      "library": "Kütüphane",
+      "ui-system": "Arayüz sistemi",
+      "database": "Veritabanı",
+      "architecture": "Mimari",
+      "state-management": "Durum yönetimi",
+      "testing-tool": "Test aracı",
+      "security-tool": "Güvenlik aracı",
+      "deployment": "Dağıtım",
+      "cloud-service": "Bulut servisi",
+      "agent": "Ajan",
+      "skill": "Yetenek",
+      "document-template": "Doküman şablonu",
+      "mcp": "MCP",
+      "hook": "Hook",
+      "quality-gate": "Kalite kapısı"
+    },
+    "difficulty": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta seviye",
+      "advanced": "İleri seviye"
+    },
+    "maturity": {
+      "stable": "Kararlı",
+      "preview": "Önizleme",
+      "experimental": "Deneysel",
+      "deprecated": "Kullanımdan kaldırıldı"
+    },
+    "origin": {
+      "system": "Sistem",
+      "user": "Kullanıcı",
+      "imported": "İçe aktarıldı"
+    },
+    "verification": {
+      "verified": "Doğrulanmış",
+      "unverified": "Doğrulanmamış"
+    },
+    "profile": {
+      "beginner": "Başlangıç",
+      "intermediate": "Orta Seviye",
+      "advanced": "İleri Seviye",
+      "team": "Takım"
+    },
+    "relation": {
+      "requires": "Gerektirir",
+      "recommends": "Önerir",
+      "compatible-with": "Uyumlu",
+      "conflicts-with": "Çakışır",
+      "replaces": "Yerini alır"
+    },
+    "badge": {
+      "systemVerified": "Sistem tarafından doğrulandı",
+      "unverified": "Doğrulanmamış",
+      "deprecated": "Kullanımdan kaldırıldı"
+    }
+  },
+  "pages": {
+    "projects": {
+      "title": "Projeler",
+      "createAction": "Proje oluştur",
+      "searchLabel": "Projelerde ara",
+      "searchPlaceholder": "Ad veya fikre göre ara",
+      "statusFilterLabel": "Durum",
+      "statusFilterAll": "Tümü",
+      "statusFilterDraft": "Taslak",
+      "statusFilterArchived": "Arşivlendi",
+      "sortLabel": "Sırala",
+      "sortUpdatedAt": "Son güncelleme",
+      "sortName": "Ad",
+      "viewLabel": "Görünüm",
+      "viewCards": "Kartlar",
+      "viewTable": "Tablo",
+      "emptyTitle": "Henüz proje yok",
+      "emptyBody": "Bir Claude Code paketi yapılandırmaya başlamak için ilk projenizi oluşturun.",
+      "noResultsTitle": "Eşleşen proje yok",
+      "noResultsBody": "Farklı bir arama deneyin veya filtreleri temizleyin.",
+      "clearFilters": "Filtreleri temizle",
+      "errorBody": "Projeler yerel depodan yüklenemedi.",
+      "statusBadgeDraft": "Taslak",
+      "statusBadgeConfigured": "Yapılandırıldı",
+      "statusBadgeValidated": "Doğrulandı",
+      "statusBadgeGenerated": "Oluşturuldu",
+      "statusBadgeArchived": "Arşivlendi",
+      "statusBadgeTrashed": "Çöp kutusunda",
+      "openAction": "Aç",
+      "cloneAction": "Klonla",
+      "archiveAction": "Arşivle",
+      "unarchiveAction": "Arşivden çıkar",
+      "trashAction": "Çöp kutusuna taşı",
+      "archiveConfirmTitle": "\"{{name}}\" arşivlensin mi?",
+      "archiveConfirmBody": "Arşivlenen projeler varsayılan listeden gizlenir. İstediğiniz zaman arşivden çıkarabilirsiniz.",
+      "unarchiveConfirmTitle": "\"{{name}}\" arşivden çıkarılsın mı?",
+      "unarchiveConfirmBody": "Proje etkin proje listenize geri döner.",
+      "trashConfirmTitle": "\"{{name}}\" çöp kutusuna taşınsın mı?",
+      "trashConfirmBody": "Bu projeyi Çöp Kutusu'ndan geri yükleyebilir veya aşağıdan hemen geri alabilirsiniz.",
+      "trashUndoMessage": "\"{{name}}\" çöp kutusuna taşındı.",
+      "undo": "Geri al",
+      "exportAction": "Yedeği dışa aktar",
+      "importAction": "Yedeği içe aktar",
+      "importDialogTitle": "Yedeği içe aktar",
+      "importFileLabel": "Yedek dosyası",
+      "importInvalidFile": "Bu dosya geçerli bir JSON değil.",
+      "importInvalidShape": "Bu dosya geçerli bir DevFlow yedeği değil.",
+      "importSummaryNew": "{{count}} yeni proje eklenecek.",
+      "importSummaryConflicts": "{{count}} proje zaten yerel olarak mevcut ve bir seçim gerektiriyor.",
+      "importConflictKeepExisting": "Mevcut olanı koru",
+      "importConflictUseImported": "İçe aktarılanı kullan",
+      "importSettingsFound": "Bu yedek ayrıca bir ayarlar anlık görüntüsü içeriyor.",
+      "importSettingsApply": "Bu ayarları da geri yükle",
+      "importSettingsNotApplied": "Bu kutuyu işaretlemediğiniz sürece yedekteki ayarlar uygulanmaz.",
+      "importConfirm": "İçe aktar",
+      "importCancel": "Vazgeç"
+    },
+    "projectCreate": {
+      "title": "Proje oluştur",
+      "nameLabel": "Proje adı",
+      "ideaLabel": "Fikir",
+      "problemLabel": "Problem",
+      "solutionLabel": "Önerilen çözüm",
+      "experienceProfileLabel": "Deneyim profili",
+      "submit": "Proje oluştur",
+      "cancel": "Vazgeç",
+      "errorRequired": "Bu alan zorunludur.",
+      "errorTooLong": "Bu alan çok uzun.",
+      "nextStepsHeading": "Sırada ne var",
+      "nextStepsItem1": "1. Proje fikrinizi, sorununuzu ve önerilen çözümünüzü tanımlayın",
+      "nextStepsItem2": "2. Önerileri kişiselleştirmek için bir deneyim profili seçin",
+      "nextStepsItem3": "3. Alanları, platformları ve gereksinimleri belirlemek için yapılandırma sihirbazına devam edin"
+    },
+    "projectOverview": {
+      "backToProjects": "Projelere dön",
+      "inspectorLabel": "Proje durumu ve eylemleri",
+      "detailsHeading": "Proje ayrıntıları",
+      "inspectorHeading": "Proje paneli",
+      "workflowHeading": "İş akışı",
+      "validationHeading": "Doğrulama",
+      "reviewValidationAction": "İncele",
+      "actionsHeading": "Proje eylemleri",
+      "nameLabel": "Proje adı",
+      "ideaLabel": "Fikir",
+      "problemLabel": "Problem",
+      "solutionLabel": "Önerilen çözüm",
+      "statusLabel": "Durum",
+      "savedNotice": "Kaydedildi",
+      "dirtyNotice": "Kaydedilmemiş değişiklikler",
+      "saveAction": "Kaydet",
+      "autosaveNotice": "Değişiklikler otomatik olarak kaydedilir.",
+      "saveErrorInvalid": "Kaydetmeden önce işaretli alanları düzeltin.",
+      "saveErrorStorage": "Yerel depoya kaydedilemedi. Değişiklikleriniz burada saklanıyor — tekrar deneyin veya bir yedek dışa aktarın.",
+      "cloneAction": "Klonla",
+      "archiveAction": "Arşivle",
+      "unarchiveAction": "Arşivden çıkar",
+      "trashAction": "Çöp kutusuna taşı",
+      "notFoundTitle": "Proje bulunamadı",
+      "notFoundBody": "Bu proje mevcut değil ya da kaldırıldı.",
+      "wizardHeading": "Yapılandırma",
+      "wizardDescription": "Profil, alanlar, platformlar, gereksinimler ve seçim/yürütme modları.",
+      "continueConfiguration": "Yapılandırmaya devam et",
+      "editConfiguration": "Yapılandırmayı düzenle",
+      "requirementsHeading": "Gereksinimler",
+      "selectionsHeading": "Seçimler",
+      "manageSelectionsAction": "Önerilerde yönet",
+      "aiAnalysisAction": "AI analizi",
+      "noSelections": "Henüz seçili bir katalog öğesi yok.",
+      "removeSelectionAction": "Kaldır",
+      "removedSelectionsNote": "{{count}} daha önce kaldırılmış öğe — Öneriler'de yönetin.",
+      "validationNoIssues": "Doğrulama sorunu yok.",
+      "validationIssueCount": "{{count}} doğrulama sorunu — Öneriler'de yönetin.",
+      "selectionSource": {
+        "required": "Gerekli",
+        "deterministic": "Önerilen",
+        "manual": "Manuel",
+        "custom": "Özel",
+        "ai": "Yapay zeka önerisi"
+      },
+      "packageAction": "Paket oluştur"
+    },
+    "package": {
+      "title": "Paket önizleme",
+      "backToProject": "Projeye dön",
+      "notFoundBody": "Bu proje mevcut değil veya kaldırıldı.",
+      "generateAction": "Önizleme oluştur",
+      "regenerateAction": "Yeniden oluştur",
+      "generatingNotice": "Oluşturuluyor…",
+      "emptyBody": "Bu proje için paketi oluşturmak üzere \"Önizleme oluştur\"u seçin.",
+      "treeHeading": "Dosyalar",
+      "issuesHeading": "Sorunlar",
+      "noIssues": "Sorun yok.",
+      "readySummary": "Paket hazır · {{count}} dosya · Doğrulama sorunu yok",
+      "rootGroup": "Kök",
+      "detailsToggle": "Ayrıntılar",
+      "blockerNotice": "İndirmeden önce tüm engelleyici sorunları giderin.",
+      "requiredBadge": "Zorunlu",
+      "editableBadge": "Düzenlenebilir",
+      "excludableBadge": "Hariç tutulabilir",
+      "excludedBadge": "Hariç tutuldu",
+      "excludeAction": "Hariç tut",
+      "includeAction": "Dahil et",
+      "editOverrideAction": "Düzenle",
+      "resetOverrideAction": "Şablona sıfırla",
+      "saveOverrideAction": "Kaydet",
+      "cancelOverrideAction": "Vazgeç",
+      "sourceLabel": "Kaynak",
+      "hashLabel": "Özet",
+      "inclusionReasonLabel": "Neden dahil edildi",
+      "downloadZipAction": "ZIP indir",
+      "downloadManifestAction": "Manifest JSON indir",
+      "downloadMarkdownAction": "Markdown paketini indir",
+      "downloadFileAction": "İndir",
+      "severity": {
+        "info": "Bilgi",
+        "warning": "Uyarı",
+        "error": "Hata",
+        "blocker": "Engelleyici"
+      }
+    },
+    "aiAnalysis": {
+      "title": "AI analizi",
+      "backToProject": "Projeye dön",
+      "notFoundBody": "Bu proje mevcut değil veya kaldırıldı.",
+      "disabledTitle": "AI analizi kapalı",
+      "disabledBody": "AI analizi kapalı. Önce Ayarlar'dan etkinleştirin — bu tercih ve bu sayfadaki yeni bir onay olmadan hiçbir istek gönderilmez.",
+      "goToSettingsAction": "Ayarlar'a git",
+      "consentNotice": "Bu isteği göndermek; proje fikrinizi, problem tanımınızı, hedef kullanıcılarınızı, seçtiğiniz alanları, hedef platformları, deneyim profilinizi, ölçeği ve bilinen gereksinimlerinizi DevFlow Studio'nun AI analiz uç noktasıyla paylaşır. Başka hiçbir şey gönderilmez ve aşağıda kabul etmediğiniz sürece projenize hiçbir şey uygulanmaz.",
+      "whatIsSharedHeading": "Neler paylaşılacak",
+      "whatHappensHeading": "Ne olacak",
+      "whatHappensItem1": "İstek yalnızca aşağıda Başlat'a tıkladıktan ve tekrar onayladıktan sonra gönderilir.",
+      "whatHappensItem2": "Hiçbir şey projenize otomatik olarak uygulanmaz.",
+      "whatHappensItem3": "Her öneri sizin tarafınızdan gözden geçirilir ve açıkça kabul veya reddedilir.",
+      "whatYoullReceiveHeading": "Neler alacaksınız",
+      "testAndDocumentNeedsItem": "Test ve doküman ihtiyaçları",
+      "startAction": "AI analizini başlat",
+      "sendAction": "Gönder",
+      "cancelAction": "Vazgeç",
+      "sendingNotice": "Gönderiliyor…",
+      "reanalyzeAction": "Yeni analiz çalıştır",
+      "retryAction": "Yeniden dene",
+      "dismissErrorAction": "Kapat",
+      "emptyBody": "Netleştirme soruları, gereksinim ve katalog önerileri, riskler ve test/döküman ihtiyaçları almak için bir AI analizi başlatın — siz kabul etmeden hiçbir şey uygulanmaz.",
+      "classificationHeading": "Sınıflandırma",
+      "complexityLabel": "Karmaşıklık",
+      "confidenceLabel": "Güven",
+      "clarificationHeading": "Netleştirme soruları",
+      "requirementsHeading": "Önerilen gereksinimler",
+      "catalogHeading": "Önerilen katalog öğeleri",
+      "customProposalsHeading": "Özel öneriler",
+      "unverifiedBadge": "Doğrulanmamış",
+      "risksHeading": "Riskler",
+      "testNeedsHeading": "Test ihtiyaçları",
+      "documentNeedsHeading": "Döküman ihtiyaçları",
+      "acceptAction": "Kabul et",
+      "rejectAction": "Reddet",
+      "acceptedLabel": "Kabul edildi",
+      "rejectedLabel": "Reddedildi"
+    },
+    "catalog": {
+      "title": "Katalog",
+      "errorBody": "Katalog yerel depodan yüklenemedi.",
+      "createAction": "Özel öğe oluştur",
+      "exportAction": "Kullanıcı kataloğunu dışa aktar",
+      "importAction": "Kullanıcı kataloğunu içe aktar",
+      "importFileLabel": "Bir kullanıcı kataloğu JSON dosyası seçin",
+      "importInvalidFile": "Dosya JSON olarak okunamadı.",
+      "importInvalidShape": "Bu dosya geçerli bir DevFlow kullanıcı kataloğu dışa aktarımı değil.",
+      "importSummary": "{{added}} öğe eklendi; zaten var olan {{skipped}} öğe atlandı.",
+      "compareAction": "Karşılaştır ({{count}})",
+      "compareError": {
+        "limit-reached": "Aynı anda en fazla 4 öğe karşılaştırabilirsiniz. Başka birini eklemeden önce birini kaldırın.",
+        "already-selected": "Bu öğe zaten karşılaştırmanızda."
+      },
+      "searchLabel": "Katalogda ara",
+      "searchPlaceholder": "Ada, açıklamaya veya etikete göre ara",
+      "kindFilterLabel": "Tür",
+      "platformFilterLabel": "Platform",
+      "profileFilterLabel": "Deneyim profili",
+      "difficultyFilterLabel": "Zorluk",
+      "maturityFilterLabel": "Olgunluk",
+      "originFilterLabel": "Kaynak",
+      "verificationFilterLabel": "Doğrulama",
+      "clearFilters": "Filtreleri temizle",
+      "noResultsTitle": "Eşleşen katalog öğesi yok",
+      "noResultsBody": "Farklı bir arama veya filtre deneyin ya da özel bir öğe oluşturun.",
+      "resultCount": "{{total}} öğeden {{from}}–{{to}} arası gösteriliyor",
+      "pagination": {
+        "label": "Katalog sayfalama",
+        "previous": "Önceki",
+        "next": "Sonraki",
+        "pageStatus": "Sayfa {{current}} / {{total}}"
+      },
+      "favoriteAction": "Favorile",
+      "unfavoriteAction": "Favoriden çıkar",
+      "addCompareAction": "Karşılaştırmaya ekle",
+      "removeCompareAction": "Karşılaştırmadan çıkar",
+      "cloneAction": "Özel olarak kopyala",
+      "editAction": "Düzenle",
+      "deleteAction": "Sil",
+      "deleteConfirmTitle": "Bu özel katalog öğesi silinsin mi?",
+      "deleteConfirmBody": "Bu yalnızca özel girdinizi kaldırır; başka hiçbir şeyi etkilemez.",
+      "addToProjectAction": "Projeye ekle",
+      "addToProjectDialogTitle": "Projeye ekle",
+      "addToProjectSelectLabel": "Proje",
+      "addToProjectNoProjects": "Henüz bir projeniz yok.",
+      "detail": {
+        "description": "Açıklama",
+        "applicability": "Uygulanabildiği alanlar",
+        "maturity": "Olgunluk",
+        "difficulty": "Zorluk",
+        "source": "Kaynak",
+        "relations": "Bağımlılıklar ve çakışmalar",
+        "documentation": "Dokümantasyon",
+        "rationale": "Öneri gerekçesi",
+        "notAvailable": "Mevcut değil"
+      },
+      "form": {
+        "nameLabel": "Ad",
+        "kindLabel": "Tür",
+        "difficultyLabel": "Zorluk",
+        "shortDescriptionEnLabel": "Kısa açıklama (İngilizce)",
+        "shortDescriptionTrLabel": "Kısa açıklama (Türkçe)",
+        "descriptionEnLabel": "Açıklama (İngilizce)",
+        "descriptionTrLabel": "Açıklama (Türkçe)",
+        "domainsLabel": "Uygulanabilir alanlar",
+        "tagsLabel": "Etiketler",
+        "platformsLabel": "Desteklenen platformlar",
+        "createSubmit": "Öğe oluştur",
+        "editSubmit": "Değişiklikleri kaydet",
+        "error": {
+          "required": "Bu alan zorunludur.",
+          "tooLong": "Bu çok uzun."
+        }
+      }
+    },
+    "compare": {
+      "title": "Karşılaştır",
+      "errorBody": "Katalog yerel depodan yüklenemedi.",
+      "clearAction": "Karşılaştırmayı temizle",
+      "emptyTitle": "Henüz karşılaştırılacak bir şey yok",
+      "emptyBody": "Katalog sayfasından karşılaştırmaya 2 ile 4 arası katalog öğesi ekleyin.",
+      "browseCatalogAction": "Kataloğa göz at",
+      "criterionColumn": "Kriter",
+      "removeAction": "Kaldır",
+      "selectAlternativeLabel": "Alternatif seç",
+      "selectAlternativePlaceholder": "Şununla değiştir…",
+      "criterion": {
+        "kind": "Tür",
+        "difficulty": "Zorluk",
+        "maturity": "Olgunluk",
+        "origin": "Kaynak",
+        "verification": "Doğrulama",
+        "domainIds": "Alanlar",
+        "supportedPlatforms": "Desteklenen platformlar",
+        "tags": "Etiketler",
+        "license": "Lisans",
+        "documentation": "Dokümantasyon"
+      }
+    },
+    "trash": {
+      "title": "Çöp Kutusu",
+      "emptyTitle": "Çöp kutusu boş",
+      "emptyBody": "Çöp kutusuna taşıdığınız projeler, siz geri yükleyene veya kalıcı olarak silene kadar burada görünür.",
+      "trashedAt": "{{date}} tarihinde çöpe taşındı",
+      "restoreAction": "Geri yükle",
+      "deleteAction": "Kalıcı olarak sil",
+      "deleteConfirmTitle": "\"{{name}}\" kalıcı olarak silinsin mi?",
+      "deleteConfirmBody": "Bu işlem geri alınamaz.",
+      "deleteConfirmLabel": "Onaylamak için \"{{name}}\" yazın",
+      "deleteConfirmMismatch": "Henüz eşleşmiyor.",
+      "restoreNotice": "\"{{name}}\" geri yüklendi."
+    },
+    "workspace": {
+      "comingSoonTitle": "Proje çalışma alanı",
+      "comingSoonBody": "Bu projenin çalışma alanı sekmeleri (Genel Bakış, Gereksinimler, Yığın ve diğerleri) sonraki bir aşamada eklenecek."
+    }
+  },
+  "settings": {
+    "title": "Ayarlar",
+    "appearance": {
+      "heading": "Görünüm",
+      "theme": {
+        "label": "Tema",
+        "light": "Açık",
+        "dark": "Koyu",
+        "system": "Sistemle eşleştir"
+      }
+    },
+    "language": {
+      "heading": "Dil",
+      "uiLabel": "Arayüz dili",
+      "outputLabel": "Oluşturulan paket dili",
+      "outputHelp": "Arayüz dilinden bağımsızdır. Bir proje paketi oluşturulduğunda kullanılır."
+    },
+    "defaults": {
+      "heading": "Proje varsayılanları",
+      "note": "Yeni bir proje oluşturduğunuzda otomatik olarak uygulanır; sihirbazda proje bazında değiştirilebilir.",
+      "experienceProfile": {
+        "label": "Varsayılan deneyim profili",
+        "beginner": "Başlangıç",
+        "intermediate": "Orta düzey",
+        "advanced": "İleri düzey",
+        "team": "Takım"
+      },
+      "selectionMode": {
+        "label": "Varsayılan seçim modu",
+        "automatic": "Otomatik",
+        "guided": "Rehberli",
+        "manual": "Manuel"
+      },
+      "executionProfile": {
+        "label": "Varsayılan yürütme profili",
+        "economic": "Ekonomik",
+        "balanced": "Dengeli",
+        "comprehensive": "Kapsamlı"
+      },
+      "autosave": {
+        "label": "Otomatik kaydetme",
+        "help": "Bir projenin ayrıntılarını, gereksinimlerini ve yapılandırmasını düzenlerken geçerlidir."
+      }
+    },
+    "ai": {
+      "heading": "Yapay zeka desteği",
+      "enableLabel": "İsteğe bağlı yapay zeka desteğini etkinleştir",
+      "help": "Bunu etkinleştirmek yalnızca tercihinizi ve onayınızı kaydeder — kendi başına hiçbir istek göndermez. Etkinleştirdikten sonra, bir projenin \"AI analizi\" sayfasından analiz başlatabilirsiniz; orada, herhangi bir şey gönderilmeden önce yeni ve açık bir bildirim ile gönderme işlemi göreceksiniz.",
+      "whatEnablingDoesHeading": "Bunu etkinleştirmek ne yapar",
+      "howItWorksHeading": "Nasıl çalışır",
+      "consentNotice": "Bunu etkinleştirmek, bir projenin AI analizi sayfasından analiz başlatmanızı sağlar; orada yapılandırılmış bir proje özeti — yalnızca o sayfadaki yeni ve açık bir gönderme işleminden sonra — özeti Claude API'sine ileten sunucu taraflı bir işleve gönderilir. Hiçbir proje verisi otomatik olarak gönderilmez ve yapay zeka önerileri her zaman sizin kabul veya reddettiğiniz gözden geçirilmiş öneriler olup asla otomatik değişiklik yapmaz. Aşağıdaki kutuyu işaretlemek bu davranışa onayınızdır; istediğiniz zaman işareti kaldırarak onayınızı geri çekebilirsiniz.",
+      "consentAcceptedAt": "Onay {{date}} tarihinde kaydedildi"
+    },
+    "localData": {
+      "heading": "Yerel veri",
+      "dangerZoneHeading": "Tehlikeli bölge",
+      "export": {
+        "label": "Yerel verileri dışa aktar",
+        "description": "DevFlow'un bu cihazda sakladığı her şeyin JSON anlık görüntüsünü indirin."
+      },
+      "reset": {
+        "label": "Ayarları varsayılanlara sıfırla",
+        "description": "Yukarıdaki her ayarı varsayılan değerine geri döndürür.",
+        "confirmTitle": "Ayarlar varsayılanlara sıfırlansın mı?",
+        "confirmBody": "Bu işlem tema, dil, varsayılanlar ile yapay zeka/yerel veri tercihlerini varsayılanlarına döndürür. Hemen ardından geri alabilirsiniz.",
+        "undo": "Geri al"
+      },
+      "clear": {
+        "label": "Tüm yerel DevFlow verilerini temizle",
+        "description": "DevFlow'un bu cihazda (yalnızca bu tarayıcıda) sakladığı her şeyi siler. DevFlow deposu dışındaki hiçbir şeye dokunulmaz.",
+        "confirmTitle": "Tüm yerel DevFlow verileri temizlensin mi?",
+        "confirmBody": "Bu işlem bu tarayıcıda saklanan tüm DevFlow verilerini kalıcı olarak siler. Bir kopyanızın kalması için önce otomatik olarak bir yedek dosyası indirilir.",
+        "exportedNotice": "Temizlemeden önce bir yedek indirildi."
+      }
+    }
+  },
+  "wizard": {
+    "stepRailLabel": "Sihirbaz adımları",
+    "stepHasError": "Eksik",
+    "stepComplete": "Tamamlandı",
+    "stepProgress": "Adım {{current}} / {{total}}",
+    "steps": {
+      "identity": "Kimlik ve özet",
+      "profile": "Deneyim profili",
+      "domains": "Alanlar",
+      "platformsScope": "Platformlar ve kapsam",
+      "functionalRequirements": "Fonksiyonel gereksinimler",
+      "dataIntegrations": "Veri, entegrasyonlar ve kısıtlar",
+      "qualitySecurity": "Kalite, güvenlik ve dağıtım",
+      "selectionExecution": "Seçim ve yürütme profilleri",
+      "recommendations": "Öneriler ve manuel katalog",
+      "review": "İnceleme ve yapılandırma"
+    },
+    "actions": {
+      "back": "Geri",
+      "saveAndExit": "Kaydet ve çık",
+      "continue": "Devam et"
+    },
+    "identity": {
+      "description": "Projenin adı ve özeti; istediğiniz zaman düzenlenebilir."
+    },
+    "profile": {
+      "description": "Size uygun deneyim profilini seçin. Bu, açıklama derinliğini, varsayılan öneri kapsamını ve gelişmiş kontrollerin görünürlüğünü değiştirir.",
+      "summary": {
+        "beginner": "Daha fazla rehberlik, daha az gelişmiş kontrol, daha küçük varsayılan ajan/beceri kümesi.",
+        "intermediate": "Orta düzey varsayılan ajan/beceri kümesiyle dengeli rehberlik.",
+        "advanced": "Asgari rehberlik, gelişmiş kontroller görünür, varsayılan olarak manuel seçim.",
+        "team": "Takım için rehberli, gelişmiş kontroller görünür, daha geniş varsayılan ajan/beceri kümesi."
+      },
+      "limits": "Öneriler kullanılabilir olduğunda en fazla {{agents}} ajan ve {{skills}} beceri hedefler."
+    },
+    "domains": {
+      "description": "Bu proje için geçerli olan her alanı seçin veya kendi alanınızı ekleyin.",
+      "systemHeading": "Alanlar",
+      "customHeading": "Özel alanlar",
+      "customLabelInput": "Özel alan adı",
+      "customLabelPlaceholder": "örn. 3D Baskı Yazılımı",
+      "addCustomAction": "Alan ekle",
+      "removeCustom": "{{label}} öğesini kaldır",
+      "emptyError": "En az bir alan seçin veya özel bir alan ekleyin.",
+      "removeConfirmTitle": "\"{{label}}\" kaldırılsın mı?",
+      "removeConfirmBody": "Bu alan kaldırılacak. Girdiğiniz başka hiçbir şey etkilenmez.",
+      "removeConfirmBodyWithImpact": "Bu alan, şu alana özel yanıtlarla birlikte kaldırılacak: {{list}}. Girdiğiniz diğer her şey etkilenmez.",
+      "removeConfirmAction": "Alanı kaldır"
+    },
+    "platformsScope": {
+      "description": "Hedef platformlar, ölçek, bağlantı, kullanıcı modeli ve veri hassasiyeti.",
+      "platformsLabel": "Hedef platformlar",
+      "platformsPlaceholder": "Bir platform yazıp Enter'a basın",
+      "scaleLabel": "Proje ölçeği",
+      "scale": {
+        "prototype": "Prototip",
+        "mvp": "MVP",
+        "standard": "Standart",
+        "enterprise": "Kurumsal"
+      },
+      "connectivityLabel": "Bağlantı",
+      "connectivity": {
+        "online": "Çevrimiçi",
+        "offline": "Çevrimdışı",
+        "hybrid": "Hibrit"
+      },
+      "userModelLabel": "Kullanıcı modeli",
+      "userModel": {
+        "single": "Tek kullanıcı",
+        "multi": "Çoklu kullanıcı"
+      },
+      "dataSensitivityLabel": "Veri hassasiyeti",
+      "dataSensitivityPlaceholder": "Bir veri kategorisi yazıp Enter'a basın"
+    },
+    "dataIntegrations": {
+      "description": "Hedef kullanıcılar, hedefler, başarı ölçütleri, kısıtlar, yetenekler ve yasaklı teknolojiler.",
+      "targetUsersLabel": "Hedef kullanıcılar",
+      "goalsLabel": "Hedefler",
+      "successMeasuresLabel": "Başarı ölçütleri",
+      "constraintsLabel": "Kısıtlar",
+      "capabilitiesLabel": "Etkinleştirilen yetenekler",
+      "forbiddenLabel": "Yasaklı teknolojiler",
+      "conditionalHeading": "Seçtiğiniz alanlara göre",
+      "conditionalPrompt": {
+        "mobileDistribution": "Mobil alanınız için uygulama mağazası dağıtımını değerlendirin.",
+        "mobilePush": "Mobil alanınız için anlık bildirimleri değerlendirin.",
+        "backendRequestScale": "Backend/API alanınız için beklenen istek ölçeğini değerlendirin.",
+        "cloudRequestScale": "Cloud/DevOps alanınız için beklenen istek ölçeğini değerlendirin.",
+        "gameEngineIntegration": "Bu projenin hangi oyun motoruyla entegre olacağını değerlendirin."
+      }
+    },
+    "functionalRequirements": {
+      "description": "Fonksiyonel gereksinimleri ekleyin, düzenleyin, önceliklendirin ve kaldırın."
+    },
+    "qualitySecurity": {
+      "description": "Kalite, güvenlik ve dağıtım gereksinimlerini ve kısıtlarını ekleyin, düzenleyin, önceliklendirin ve kaldırın."
+    },
+    "selectionExecution": {
+      "description": "Seçim modu ve yürütme profili birbirinden bağımsız ayarlardır.",
+      "selectionModeLabel": "Seçim modu",
+      "executionProfileLabel": "Yürütme profili",
+      "automaticNote": "Otomatik modda, Öneriler adımı gerekli/önerilen öğeleri sizin için önceden işaretler; ancak projeye kaydedilmeden önce yine de gözden geçirip onaylarsınız."
+    },
+    "recommendations": {
+      "modeNote": {
+        "automatic": "Otomatik mod aşağıda gerekli ve önerilen öğeleri önceden önerir. Siz onaylamadan hiçbir şey kaydedilmez.",
+        "guided": "Rehberli mod gerekli, önerilen ve alternatif öğeleri gösterir. İstediklerinizi gözden geçirip onaylayın.",
+        "manual": "Manuel mod yalnızca gerekli öğeleri ve doğrulama uyarılarını gösterir. Başka bir şey eklemek için aşağıdaki aramayı kullanın."
+      },
+      "scoreLabel": "Puan {{score}}",
+      "missingDependency": "Eksik bağımlılık: {{ids}}",
+      "acceptAction": "Kabul et",
+      "removeAction": "Kaldır",
+      "restoreAction": "Geri getir",
+      "addAction": "Ekle",
+      "pendingSuggestedCount": "{{count}} önerilen öğe henüz eklenmedi.",
+      "acceptAllAction": "Tüm önerilenleri kabul et",
+      "requiredHeading": "Gerekli",
+      "recommendedHeading": "Önerilen",
+      "alternativesHeading": "Alternatifler",
+      "noneYet": "Mevcut yapılandırmanız için burada henüz bir şey yok.",
+      "manualAddHeading": "Katalogda ara",
+      "manualSearchLabel": "Ada göre ara",
+      "customAddHeading": "Özel bir öğe ekle",
+      "customNameLabel": "Ad",
+      "customKindLabel": "Tür",
+      "addCustomAction": "Özel öğe ekle",
+      "validationHeading": "Doğrulama",
+      "validationOk": "Paket dışa aktarımını engelleyen bir sorun yok.",
+      "validationBlocked": "Şu anda paket dışa aktarımını engelleyen bir veya daha fazla sorun var.",
+      "noIssues": "Doğrulama sorunu yok.",
+      "severity": {
+        "info": "Bilgi",
+        "warning": "Uyarı",
+        "error": "Hata",
+        "blocker": "Engelleyici"
+      },
+      "acknowledgeReasonPlaceholder": "Onaylama gerekçesi",
+      "acknowledgeAction": "Onayla",
+      "acknowledged": "Onaylandı: {{reason}}"
+    },
+    "requirements": {
+      "emptyTitle": "Henüz gereksinim yok",
+      "emptyBody": "Aşağıdan ilk gereksiminizi ekleyin.",
+      "priorityLabel": "Öncelik",
+      "editAction": "Düzenle",
+      "removeAction": "Kaldır",
+      "editHeading": "Gereksinimi düzenle",
+      "addHeading": "Gereksinim ekle",
+      "typeLabel": "Tür",
+      "type": {
+        "functional": "Fonksiyonel",
+        "non-functional": "Fonksiyonel olmayan",
+        "constraint": "Kısıt"
+      },
+      "titleLabel": "Başlık",
+      "descriptionLabel": "Açıklama",
+      "priority": {
+        "must": "Zorunlu",
+        "should": "Olmalı",
+        "could": "Olabilir",
+        "wont": "Olmayacak"
+      },
+      "saveAction": "Değişiklikleri kaydet",
+      "addAction": "Gereksinim ekle",
+      "removeConfirmTitle": "\"{{title}}\" kaldırılsın mı?",
+      "removeConfirmBody": "Bu işlem buradan geri alınamaz, ancak tekrar ekleyebilirsiniz."
+    },
+    "review": {
+      "description": "Tamamlandı olarak işaretlemeden önce yapılandırmanızı gözden geçirin.",
+      "nameLabel": "Ad",
+      "profileLabel": "Deneyim profili",
+      "domainsLabel": "Alanlar",
+      "none": "Yok",
+      "requirementsLabel": "Gereksinimler",
+      "requirementsCount": "{{count}} gereksinim",
+      "incompleteHeading": "Yapılandırabilmeniz için şu bölümlerin dikkat gerektirdiğini unutmayın:",
+      "readyNotice": "Her bölüm tamamlandı. Bu projeyi yapılandırıldı olarak işaretleyebilirsiniz.",
+      "editSection": "{{section}} bölümünü düzenle",
+      "markConfiguredAction": "Yapılandırıldı olarak işaretle"
+    }
+  }
+}

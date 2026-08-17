@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devflow.local/schemas/ai-analysis-result-v1.json",
+  "title": "DevFlow AI Analysis Result V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "requestId", "analysisId", "classification", "clarificationQuestions", "proposedRequirements", "recommendedItemIds", "customProposals", "risks", "testNeeds", "documentNeeds", "warnings"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "requestId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "analysisId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domainIds", "complexity", "confidence"],
+      "properties": {
+        "domainIds": {"type": "array", "maxItems": 20, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "complexity": {"enum": ["prototype", "standard", "complex"]},
+        "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "clarificationQuestions": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "question", "reason", "affects", "requiredBeforeGeneration"],
+        "properties": {
+          "id": {"type": "string", "maxLength": 100},
+          "question": {"type": "string", "maxLength": 500},
+          "reason": {"type": "string", "maxLength": 1000},
+          "affects": {"type": "array", "uniqueItems": true, "items": {"enum": ["scope", "stack", "architecture", "security", "testing"]}},
+          "requiredBeforeGeneration": {"type": "boolean"}
+        }
+      }
+    },
+    "proposedRequirements": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "type", "title", "description", "priority", "reason"],
+        "properties": {
+          "id": {"type": "string", "maxLength": 100},
+          "type": {"enum": ["functional", "non-functional", "constraint"]},
+          "title": {"type": "string", "maxLength": 200},
+          "description": {"type": "string", "maxLength": 2000},
+          "priority": {"enum": ["must", "should", "could", "wont"]},
+          "reason": {"type": "string", "maxLength": 1000}
+        }
+      }
+    },
+    "recommendedItemIds": {"type": "array", "maxItems": 100, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+    "customProposals": {
+      "type": "array",
+      "maxItems": 30,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "kind", "reason", "verification"],
+        "properties": {
+          "name": {"type": "string", "maxLength": 200},
+          "kind": {"type": "string", "maxLength": 100},
+          "reason": {"type": "string", "maxLength": 1000},
+          "documentationUrl": {"type": "string", "format": "uri", "maxLength": 1000},
+          "verification": {"const": "unverified"}
+        }
+      }
+    },
+    "risks": {"$ref": "#/$defs/textList"},
+    "testNeeds": {"$ref": "#/$defs/textList"},
+    "documentNeeds": {"$ref": "#/$defs/textList"},
+    "warnings": {"$ref": "#/$defs/textList"}
+  },
+  "$defs": {
+    "textList": {"type": "array", "maxItems": 50, "items": {"type": "string", "maxLength": 1000}}
+  }
+}
+

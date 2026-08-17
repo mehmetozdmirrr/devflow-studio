@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devflow.local/schemas/project-backup-v1.json",
+  "title": "DevFlow Project Backup V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["backupVersion", "exportedAt", "projects", "userCatalogItems"],
+  "properties": {
+    "backupVersion": {"const": 1},
+    "exportedAt": {"type": "string", "format": "date-time"},
+    "projects": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "schemaVersion", "revision", "meta", "brief", "configuration", "requirements", "selections", "packageSettings", "validation", "status", "createdAt", "updatedAt"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1, "maxLength": 100},
+          "schemaVersion": {"type": "integer", "minimum": 1},
+          "revision": {"type": "integer", "minimum": 0},
+          "meta": {"type": "object", "required": ["name", "slug", "tags"]},
+          "brief": {"type": "object", "required": ["idea", "problem", "proposedSolution", "targetUsers", "goals", "successMeasures", "constraints"]},
+          "configuration": {
+            "type": "object",
+            "required": ["experienceProfile", "projectScale", "selectionMode", "executionProfile", "uiLanguage", "outputLanguage", "domainIds", "customDomainIds", "customDomainLabels", "targetPlatforms", "connectivity", "userModel", "dataSensitivity", "enabledCapabilities", "forbiddenTechnologies"]
+          },
+          "requirements": {"type": "array", "maxItems": 1000, "items": {"type": "object"}},
+          "selections": {"type": "array", "maxItems": 1000, "items": {"type": "object"}},
+          "latestAIAnalysis": {"type": "object"},
+          "packageSettings": {"type": "object"},
+          "validation": {"type": "object"},
+          "status": {"enum": ["draft", "configured", "validated", "generated", "archived", "trashed"]},
+          "archivedAt": {"type": "string", "format": "date-time"},
+          "trashedAt": {"type": "string", "format": "date-time"},
+          "createdAt": {"type": "string", "format": "date-time"},
+          "updatedAt": {"type": "string", "format": "date-time"}
+        }
+      }
+    },
+    "userCatalogItems": {"type": "array", "maxItems": 500, "items": {"type": "object"}},
+    "settings": {"type": "object"}
+  }
+}
+

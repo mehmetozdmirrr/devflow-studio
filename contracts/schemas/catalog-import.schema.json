@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devflow.local/schemas/catalog-import-v1.json",
+  "title": "DevFlow User Catalog Import V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "catalogVersion", "items"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "catalogVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+    "items": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {"$ref": "#/$defs/item"}
+    }
+  },
+  "$defs": {
+    "localized": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["en", "tr"],
+      "properties": {"en": {"type": "string", "maxLength": 5000}, "tr": {"type": "string", "maxLength": 5000}}
+    },
+    "item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "schemaVersion", "itemVersion", "kind", "name", "slug", "shortDescription", "description", "domainIds", "tags", "supportedPlatforms", "difficulty", "maturity", "origin", "verification", "relations", "recommendation", "details", "createdAt", "updatedAt"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "maxLength": 100},
+        "schemaVersion": {"const": 1},
+        "itemVersion": {"type": "string", "maxLength": 50},
+        "kind": {"enum": ["domain", "subdomain", "language", "framework", "library", "ui-system", "database", "architecture", "state-management", "testing-tool", "security-tool", "deployment", "cloud-service", "agent", "skill", "document-template", "mcp", "hook", "quality-gate"]},
+        "name": {"type": "string", "minLength": 1, "maxLength": 200},
+        "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 200},
+        "shortDescription": {"$ref": "#/$defs/localized"},
+        "description": {"$ref": "#/$defs/localized"},
+        "domainIds": {"type": "array", "maxItems": 30, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "tags": {"type": "array", "maxItems": 50, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "supportedPlatforms": {"type": "array", "maxItems": 50, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "difficulty": {"enum": ["beginner", "intermediate", "advanced"]},
+        "maturity": {"enum": ["stable", "preview", "experimental", "deprecated"]},
+        "origin": {"enum": ["user", "imported"]},
+        "verification": {"const": "unverified"},
+        "relations": {"type": "array", "maxItems": 100, "items": {"type": "object"}},
+        "recommendation": {"type": "object"},
+        "documentation": {"type": "object"},
+        "license": {"type": "string", "maxLength": 200},
+        "details": {"type": "object"},
+        "createdAt": {"type": "string", "format": "date-time"},
+        "updatedAt": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}
+

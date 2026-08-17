@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devflow.local/schemas/ai-analysis-request-v1.json",
+  "title": "DevFlow AI Analysis Request V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "requestId", "locale", "outputLanguage", "consent", "project", "catalogContext"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "requestId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "locale": {"enum": ["tr", "en"]},
+    "outputLanguage": {"enum": ["tr", "en"]},
+    "consent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accepted", "acceptedAt", "noticeVersion"],
+      "properties": {
+        "accepted": {"const": true},
+        "acceptedAt": {"type": "string", "format": "date-time"},
+        "noticeVersion": {"type": "string", "minLength": 1, "maxLength": 50}
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["idea", "problem", "targetUsers", "selectedDomainIds", "targetPlatforms", "experienceProfile", "scale", "knownRequirements"],
+      "properties": {
+        "idea": {"type": "string", "minLength": 1, "maxLength": 5000},
+        "problem": {"type": "string", "maxLength": 5000},
+        "targetUsers": {"type": "array", "maxItems": 20, "items": {"type": "string", "maxLength": 300}},
+        "selectedDomainIds": {"type": "array", "maxItems": 20, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "targetPlatforms": {"type": "array", "maxItems": 20, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}},
+        "experienceProfile": {"enum": ["beginner", "intermediate", "advanced", "team"]},
+        "scale": {"enum": ["prototype", "mvp", "standard", "enterprise"]},
+        "knownRequirements": {
+          "type": "array",
+          "maxItems": 100,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "title", "description", "priority"],
+            "properties": {
+              "type": {"enum": ["functional", "non-functional", "constraint"]},
+              "title": {"type": "string", "minLength": 1, "maxLength": 200},
+              "description": {"type": "string", "maxLength": 2000},
+              "priority": {"enum": ["must", "should", "could", "wont"]}
+            }
+          }
+        }
+      }
+    },
+    "catalogContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["catalogVersion", "allowedItemIds"],
+      "properties": {
+        "catalogVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+        "allowedItemIds": {"type": "array", "maxItems": 500, "uniqueItems": true, "items": {"type": "string", "maxLength": 100}}
+      }
+    }
+  }
+}
+

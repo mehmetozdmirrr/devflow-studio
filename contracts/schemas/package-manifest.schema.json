@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://devflow.local/schemas/package-manifest-v1.json",
+  "title": "DevFlow Package Manifest V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatorVersion", "projectId", "projectRevision", "catalogVersion", "ruleSetVersion", "templateSetVersion", "outputLanguage", "selectedItems", "files", "warnings"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "generatorVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+    "projectId": {"type": "string", "minLength": 1, "maxLength": 100},
+    "projectRevision": {"type": "integer", "minimum": 0},
+    "catalogVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+    "ruleSetVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+    "templateSetVersion": {"type": "string", "minLength": 1, "maxLength": 50},
+    "outputLanguage": {"enum": ["tr", "en"]},
+    "selectedItems": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["itemId", "itemVersion", "name", "kind", "verification"],
+        "properties": {
+          "itemId": {"type": "string", "maxLength": 100},
+          "itemVersion": {"type": "string", "maxLength": 50},
+          "name": {"type": "string", "maxLength": 200},
+          "kind": {"type": "string", "maxLength": 100},
+          "verification": {"enum": ["verified", "unverified"]}
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "mediaType", "contentHash", "source", "inclusionReason"],
+        "properties": {
+          "path": {"type": "string", "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$", "maxLength": 500},
+          "mediaType": {"enum": ["text/markdown", "application/json", "text/plain"]},
+          "contentHash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "source": {"enum": ["core", "template", "catalog-item", "user-override"]},
+          "sourceId": {"type": "string", "maxLength": 100},
+          "inclusionReason": {"type": "string", "minLength": 1, "maxLength": 1000}
+        }
+      }
+    },
+    "warnings": {"type": "array", "items": {"type": "object"}},
+    "generatedAt": {"type": "string", "format": "date-time"}
+  }
+}
+

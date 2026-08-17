@@ -1,0 +1,32 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+service-account*.json
+
+# Dependencies and generated output
+node_modules/
+dist/
+build/
+coverage/
+test-results/
+playwright-report/
+
+# Logs, caches, and temporary files
+*.log
+*.tmp
+.cache/
+.vite/
+*.tsbuildinfo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Public package templates
+/templates/*
+!/templates/generated-package/
+!/templates/generated-package/**

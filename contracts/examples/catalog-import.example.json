@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "user-v1",
+  "items": [
+    {
+      "id": "user-framework-example",
+      "schemaVersion": 1,
+      "itemVersion": "1.0.0",
+      "kind": "framework",
+      "name": "Example Framework",
+      "slug": "example-framework",
+      "shortDescription": {"en": "Example user framework.", "tr": "Örnek kullanıcı frameworkü."},
+      "description": {"en": "An unverified custom example.", "tr": "Doğrulanmamış özel örnek."},
+      "domainIds": ["domain-web"],
+      "tags": ["example"],
+      "supportedPlatforms": ["web"],
+      "difficulty": "intermediate",
+      "maturity": "experimental",
+      "origin": "user",
+      "verification": "unverified",
+      "relations": [],
+      "recommendation": {},
+      "details": {},
+      "createdAt": "2026-08-14T12:00:00.000Z",
+      "updatedAt": "2026-08-14T12:00:00.000Z"
+    }
+  ]
+}
+

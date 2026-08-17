@@ -1,0 +1,754 @@
+{
+  "app": {
+    "name": "DevFlow Studio"
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "projects": "Projects",
+    "catalog": "Catalog",
+    "compare": "Compare",
+    "trash": "Trash",
+    "settings": "Settings"
+  },
+  "projectNav": {
+    "label": "Project navigation",
+    "overview": "Overview",
+    "configure": "Configure",
+    "aiAnalysis": "AI Analysis",
+    "package": "Package"
+  },
+  "landing": {
+    "title": "Plan, configure, and package your next Claude Code project",
+    "subtitle": "A deterministic-first workspace for choosing stacks, agents, and skills, with optional AI assistance.",
+    "createProject": "Create project",
+    "browseCatalog": "Browse catalog",
+    "workflow": {
+      "brief": "Project brief",
+      "requirements": "Requirements",
+      "recommendations": "Recommendations",
+      "validation": "Validation",
+      "package": "Claude Code package",
+      "tags": {
+        "localFirst": "Local-first",
+        "deterministic": "Deterministic",
+        "optionalAI": "Optional AI"
+      }
+    },
+    "howItWorks": {
+      "heading": "How DevFlow works",
+      "step1": {
+        "title": "Describe the project",
+        "body": "Capture the idea, the problem, and the proposed solution in plain language."
+      },
+      "step2": {
+        "title": "Configure requirements",
+        "body": "Walk through the adaptive wizard to set domains, platforms, and requirements."
+      },
+      "step3": {
+        "title": "Review recommendations",
+        "body": "Accept deterministic catalog recommendations, or bring in optional AI analysis."
+      },
+      "step4": {
+        "title": "Generate the package",
+        "body": "Export a ready-to-use Claude Code package as a ZIP, manifest, or Markdown bundle."
+      }
+    },
+    "capabilities": {
+      "heading": "Core capabilities",
+      "localFirst": {
+        "title": "Local-first persistence",
+        "body": "Projects are saved to your browser's local storage — nothing leaves your machine by default."
+      },
+      "deterministic": {
+        "title": "Deterministic recommendations",
+        "body": "A rule-based engine suggests stacks, agents, and skills without relying on AI."
+      },
+      "catalog": {
+        "title": "Catalog and comparison",
+        "body": "Browse, filter, and compare curated catalog items across every project kind."
+      },
+      "optionalAI": {
+        "title": "Optional AI analysis",
+        "body": "Ask for AI-assisted analysis only when you choose to, with explicit consent."
+      }
+    },
+    "aiExplainer": {
+      "heading": "Deterministic-first, AI optional",
+      "deterministic": {
+        "heading": "Deterministic workflow",
+        "item1": "Works without AI or an API key",
+        "item2": "Local-first — your data stays in the browser",
+        "item3": "Always available, no external dependency"
+      },
+      "optionalAI": {
+        "heading": "Optional AI",
+        "item1": "Requires your explicit consent",
+        "item2": "Only requested on your action, never automatically",
+        "item3": "Suggestions are reviewed before anything is applied"
+      }
+    },
+    "finalCta": {
+      "heading": "Ready to start your next project?",
+      "body": "Describe your idea and configure the rest through the guided wizard."
+    },
+    "footer": {
+      "text": "DevFlow Studio — a local-first Claude Code project planning workspace."
+    }
+  },
+  "common": {
+    "loading": "Loading…",
+    "emptyTitle": "Nothing here yet",
+    "emptyBody": "There is no content to show right now.",
+    "errorTitle": "Something went wrong",
+    "errorBody": "An unexpected error occurred. You can try again.",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "comingSoon": "Coming soon",
+    "removeTag": "Remove {{value}}",
+    "all": "All"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page or project you're looking for doesn't exist or was removed.",
+    "backHome": "Back to home"
+  },
+  "catalog": {
+    "kind": {
+      "domain": "Domain",
+      "subdomain": "Subdomain",
+      "language": "Language",
+      "framework": "Framework",
+      "library": "Library",
+      "ui-system": "UI system",
+      "database": "Database",
+      "architecture": "Architecture",
+      "state-management": "State management",
+      "testing-tool": "Testing tool",
+      "security-tool": "Security tool",
+      "deployment": "Deployment",
+      "cloud-service": "Cloud service",
+      "agent": "Agent",
+      "skill": "Skill",
+      "document-template": "Document template",
+      "mcp": "MCP",
+      "hook": "Hook",
+      "quality-gate": "Quality gate"
+    },
+    "difficulty": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "maturity": {
+      "stable": "Stable",
+      "preview": "Preview",
+      "experimental": "Experimental",
+      "deprecated": "Deprecated"
+    },
+    "origin": {
+      "system": "System",
+      "user": "User",
+      "imported": "Imported"
+    },
+    "verification": {
+      "verified": "Verified",
+      "unverified": "Unverified"
+    },
+    "profile": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "team": "Team"
+    },
+    "relation": {
+      "requires": "Requires",
+      "recommends": "Recommends",
+      "compatible-with": "Compatible with",
+      "conflicts-with": "Conflicts with",
+      "replaces": "Replaces"
+    },
+    "badge": {
+      "systemVerified": "System verified",
+      "unverified": "Unverified",
+      "deprecated": "Deprecated"
+    }
+  },
+  "pages": {
+    "projects": {
+      "title": "Projects",
+      "createAction": "Create project",
+      "searchLabel": "Search projects",
+      "searchPlaceholder": "Search by name or idea",
+      "statusFilterLabel": "Status",
+      "statusFilterAll": "All",
+      "statusFilterDraft": "Draft",
+      "statusFilterArchived": "Archived",
+      "sortLabel": "Sort by",
+      "sortUpdatedAt": "Last updated",
+      "sortName": "Name",
+      "viewLabel": "View",
+      "viewCards": "Cards",
+      "viewTable": "Table",
+      "emptyTitle": "No projects yet",
+      "emptyBody": "Create your first project to start configuring a Claude Code package.",
+      "noResultsTitle": "No matching projects",
+      "noResultsBody": "Try a different search, or clear filters.",
+      "clearFilters": "Clear filters",
+      "errorBody": "Projects couldn't be loaded from local storage.",
+      "statusBadgeDraft": "Draft",
+      "statusBadgeConfigured": "Configured",
+      "statusBadgeValidated": "Validated",
+      "statusBadgeGenerated": "Generated",
+      "statusBadgeArchived": "Archived",
+      "statusBadgeTrashed": "Trashed",
+      "openAction": "Open",
+      "cloneAction": "Clone",
+      "archiveAction": "Archive",
+      "unarchiveAction": "Unarchive",
+      "trashAction": "Move to trash",
+      "archiveConfirmTitle": "Archive \"{{name}}\"?",
+      "archiveConfirmBody": "Archived projects are hidden from the default list. You can unarchive them at any time.",
+      "unarchiveConfirmTitle": "Unarchive \"{{name}}\"?",
+      "unarchiveConfirmBody": "The project returns to your active project list.",
+      "trashConfirmTitle": "Move \"{{name}}\" to trash?",
+      "trashConfirmBody": "You can restore this project from Trash, or undo immediately below.",
+      "trashUndoMessage": "\"{{name}}\" moved to trash.",
+      "undo": "Undo",
+      "exportAction": "Export backup",
+      "importAction": "Import backup",
+      "importDialogTitle": "Import backup",
+      "importFileLabel": "Backup file",
+      "importInvalidFile": "This file isn't valid JSON.",
+      "importInvalidShape": "This file isn't a valid DevFlow backup.",
+      "importSummaryNew": "{{count}} new project(s) will be added.",
+      "importSummaryConflicts": "{{count}} project(s) already exist locally and need a choice.",
+      "importConflictKeepExisting": "Keep existing",
+      "importConflictUseImported": "Use imported",
+      "importSettingsFound": "This backup also includes a settings snapshot.",
+      "importSettingsApply": "Also restore these settings",
+      "importSettingsNotApplied": "Settings from the backup are not applied unless you check this box.",
+      "importConfirm": "Import",
+      "importCancel": "Cancel"
+    },
+    "projectCreate": {
+      "title": "Create project",
+      "nameLabel": "Project name",
+      "ideaLabel": "Idea",
+      "problemLabel": "Problem",
+      "solutionLabel": "Proposed solution",
+      "experienceProfileLabel": "Experience profile",
+      "submit": "Create project",
+      "cancel": "Cancel",
+      "errorRequired": "This field is required.",
+      "errorTooLong": "This field is too long.",
+      "nextStepsHeading": "What happens next",
+      "nextStepsItem1": "1. Describe your project idea, problem, and proposed solution",
+      "nextStepsItem2": "2. Choose an experience profile to tailor suggestions",
+      "nextStepsItem3": "3. Continue into the configuration wizard to set domains, platforms, and requirements"
+    },
+    "projectOverview": {
+      "backToProjects": "Back to projects",
+      "inspectorLabel": "Project status and actions",
+      "detailsHeading": "Project details",
+      "inspectorHeading": "Project inspector",
+      "workflowHeading": "Workflow",
+      "validationHeading": "Validation",
+      "reviewValidationAction": "Review",
+      "actionsHeading": "Project actions",
+      "nameLabel": "Project name",
+      "ideaLabel": "Idea",
+      "problemLabel": "Problem",
+      "solutionLabel": "Proposed solution",
+      "statusLabel": "Status",
+      "savedNotice": "Saved",
+      "dirtyNotice": "Unsaved changes",
+      "saveAction": "Save",
+      "autosaveNotice": "Changes save automatically.",
+      "saveErrorInvalid": "Fix the highlighted fields before saving.",
+      "saveErrorStorage": "Couldn't save to local storage. Your changes are kept here — try again or export a backup.",
+      "cloneAction": "Clone",
+      "archiveAction": "Archive",
+      "unarchiveAction": "Unarchive",
+      "trashAction": "Move to trash",
+      "notFoundTitle": "Project not found",
+      "notFoundBody": "This project doesn't exist or was removed.",
+      "wizardHeading": "Configuration",
+      "wizardDescription": "Profile, domains, platforms, requirements, and selection/execution modes.",
+      "continueConfiguration": "Continue configuration",
+      "editConfiguration": "Edit configuration",
+      "requirementsHeading": "Requirements",
+      "selectionsHeading": "Selections",
+      "manageSelectionsAction": "Manage in Recommendations",
+      "aiAnalysisAction": "AI analysis",
+      "noSelections": "No catalog items are selected yet.",
+      "removeSelectionAction": "Remove",
+      "removedSelectionsNote": "{{count}} previously removed item(s) — manage them in Recommendations.",
+      "validationNoIssues": "No validation issues.",
+      "validationIssueCount": "{{count}} validation issue(s) — manage them in Recommendations.",
+      "selectionSource": {
+        "required": "Required",
+        "deterministic": "Recommended",
+        "manual": "Manual",
+        "custom": "Custom",
+        "ai": "AI-suggested"
+      },
+      "packageAction": "Generate package"
+    },
+    "package": {
+      "title": "Package preview",
+      "backToProject": "Back to project",
+      "notFoundBody": "This project doesn't exist or was removed.",
+      "generateAction": "Generate preview",
+      "regenerateAction": "Regenerate",
+      "generatingNotice": "Generating…",
+      "emptyBody": "Select \"Generate preview\" to build the package for this project.",
+      "treeHeading": "Files",
+      "issuesHeading": "Issues",
+      "noIssues": "No issues.",
+      "readySummary": "Package ready · {{count}} file(s) · No validation issues",
+      "rootGroup": "Root",
+      "detailsToggle": "Details",
+      "blockerNotice": "Fix all blocker issues before downloading.",
+      "requiredBadge": "Required",
+      "editableBadge": "Editable",
+      "excludableBadge": "Excludable",
+      "excludedBadge": "Excluded",
+      "excludeAction": "Exclude",
+      "includeAction": "Include",
+      "editOverrideAction": "Edit",
+      "resetOverrideAction": "Reset to template",
+      "saveOverrideAction": "Save",
+      "cancelOverrideAction": "Cancel",
+      "sourceLabel": "Source",
+      "hashLabel": "Hash",
+      "inclusionReasonLabel": "Why included",
+      "downloadZipAction": "Download ZIP",
+      "downloadManifestAction": "Download manifest JSON",
+      "downloadMarkdownAction": "Download Markdown bundle",
+      "downloadFileAction": "Download",
+      "severity": {
+        "info": "Info",
+        "warning": "Warning",
+        "error": "Error",
+        "blocker": "Blocker"
+      }
+    },
+    "aiAnalysis": {
+      "title": "AI analysis",
+      "backToProject": "Back to project",
+      "notFoundBody": "This project doesn't exist or was removed.",
+      "disabledTitle": "AI analysis is off",
+      "disabledBody": "AI analysis is turned off. Enable it in Settings first — no request is ever sent without that opt-in and a fresh consent confirmation on this page.",
+      "goToSettingsAction": "Go to Settings",
+      "consentNotice": "Sending this request shares your project idea, problem statement, target users, selected domains, target platforms, experience profile, scale, and known requirements with DevFlow Studio's AI analysis endpoint. Nothing else is sent, and nothing is applied to your project until you accept it below.",
+      "whatIsSharedHeading": "What will be shared",
+      "whatHappensHeading": "What happens",
+      "whatHappensItem1": "A request is only sent after you click Start below, then confirm again.",
+      "whatHappensItem2": "Nothing is applied to your project automatically.",
+      "whatHappensItem3": "Every suggestion is reviewed and explicitly accepted or rejected by you.",
+      "whatYoullReceiveHeading": "What you'll receive",
+      "testAndDocumentNeedsItem": "Test and document needs",
+      "startAction": "Start AI analysis",
+      "sendAction": "Send",
+      "cancelAction": "Cancel",
+      "sendingNotice": "Sending…",
+      "reanalyzeAction": "Run a new analysis",
+      "retryAction": "Retry",
+      "dismissErrorAction": "Dismiss",
+      "emptyBody": "Start an AI analysis to get clarification questions, requirement and catalog suggestions, risks, and test/document needs — nothing is applied until you accept it.",
+      "classificationHeading": "Classification",
+      "complexityLabel": "Complexity",
+      "confidenceLabel": "Confidence",
+      "clarificationHeading": "Clarification questions",
+      "requirementsHeading": "Proposed requirements",
+      "catalogHeading": "Recommended catalog items",
+      "customProposalsHeading": "Custom proposals",
+      "unverifiedBadge": "Unverified",
+      "risksHeading": "Risks",
+      "testNeedsHeading": "Test needs",
+      "documentNeedsHeading": "Document needs",
+      "acceptAction": "Accept",
+      "rejectAction": "Reject",
+      "acceptedLabel": "Accepted",
+      "rejectedLabel": "Rejected"
+    },
+    "catalog": {
+      "title": "Catalog",
+      "errorBody": "The catalog couldn't be loaded from local storage.",
+      "createAction": "Create custom item",
+      "exportAction": "Export user catalog",
+      "importAction": "Import user catalog",
+      "importFileLabel": "Choose a user catalog JSON file",
+      "importInvalidFile": "That file couldn't be read as JSON.",
+      "importInvalidShape": "That file isn't a valid DevFlow user catalog export.",
+      "importSummary": "Added {{added}} item(s); skipped {{skipped}} that already existed.",
+      "compareAction": "Compare ({{count}})",
+      "compareError": {
+        "limit-reached": "You can compare up to 4 items at a time. Remove one before adding another.",
+        "already-selected": "That item is already in your comparison."
+      },
+      "searchLabel": "Search catalog",
+      "searchPlaceholder": "Search by name, description, or tag",
+      "kindFilterLabel": "Kind",
+      "platformFilterLabel": "Platform",
+      "profileFilterLabel": "Experience profile",
+      "difficultyFilterLabel": "Difficulty",
+      "maturityFilterLabel": "Maturity",
+      "originFilterLabel": "Source",
+      "verificationFilterLabel": "Verification",
+      "clearFilters": "Clear filters",
+      "noResultsTitle": "No matching catalog items",
+      "noResultsBody": "Try a different search or filter, or create a custom item.",
+      "resultCount": "Showing {{from}}–{{to}} of {{total}}",
+      "pagination": {
+        "label": "Catalog pagination",
+        "previous": "Previous",
+        "next": "Next",
+        "pageStatus": "Page {{current}} of {{total}}"
+      },
+      "favoriteAction": "Favorite",
+      "unfavoriteAction": "Unfavorite",
+      "addCompareAction": "Add to compare",
+      "removeCompareAction": "Remove from compare",
+      "cloneAction": "Clone as custom",
+      "editAction": "Edit",
+      "deleteAction": "Delete",
+      "deleteConfirmTitle": "Delete this custom catalog item?",
+      "deleteConfirmBody": "This only removes your custom entry; nothing else is affected.",
+      "addToProjectAction": "Add to project",
+      "addToProjectDialogTitle": "Add to project",
+      "addToProjectSelectLabel": "Project",
+      "addToProjectNoProjects": "You don't have a project yet.",
+      "detail": {
+        "description": "Description",
+        "applicability": "Applies to domains",
+        "maturity": "Maturity",
+        "difficulty": "Difficulty",
+        "source": "Source",
+        "relations": "Dependencies and conflicts",
+        "documentation": "Documentation",
+        "rationale": "Recommendation rationale",
+        "notAvailable": "Not available"
+      },
+      "form": {
+        "nameLabel": "Name",
+        "kindLabel": "Kind",
+        "difficultyLabel": "Difficulty",
+        "shortDescriptionEnLabel": "Short description (English)",
+        "shortDescriptionTrLabel": "Short description (Turkish)",
+        "descriptionEnLabel": "Description (English)",
+        "descriptionTrLabel": "Description (Turkish)",
+        "domainsLabel": "Applicable domains",
+        "tagsLabel": "Tags",
+        "platformsLabel": "Supported platforms",
+        "createSubmit": "Create item",
+        "editSubmit": "Save changes",
+        "error": {
+          "required": "This field is required.",
+          "tooLong": "This is too long."
+        }
+      }
+    },
+    "compare": {
+      "title": "Compare",
+      "errorBody": "The catalog couldn't be loaded from local storage.",
+      "clearAction": "Clear comparison",
+      "emptyTitle": "Nothing to compare yet",
+      "emptyBody": "Add 2 to 4 catalog items to comparison from the Catalog page.",
+      "browseCatalogAction": "Browse catalog",
+      "criterionColumn": "Criterion",
+      "removeAction": "Remove",
+      "selectAlternativeLabel": "Select alternative",
+      "selectAlternativePlaceholder": "Swap for…",
+      "criterion": {
+        "kind": "Kind",
+        "difficulty": "Difficulty",
+        "maturity": "Maturity",
+        "origin": "Source",
+        "verification": "Verification",
+        "domainIds": "Domains",
+        "supportedPlatforms": "Supported platforms",
+        "tags": "Tags",
+        "license": "License",
+        "documentation": "Documentation"
+      }
+    },
+    "trash": {
+      "title": "Trash",
+      "emptyTitle": "Trash is empty",
+      "emptyBody": "Projects you move to trash appear here until you restore or permanently delete them.",
+      "trashedAt": "Trashed {{date}}",
+      "restoreAction": "Restore",
+      "deleteAction": "Delete permanently",
+      "deleteConfirmTitle": "Permanently delete \"{{name}}\"?",
+      "deleteConfirmBody": "This cannot be undone.",
+      "deleteConfirmLabel": "Type \"{{name}}\" to confirm",
+      "deleteConfirmMismatch": "Doesn't match yet.",
+      "restoreNotice": "\"{{name}}\" restored."
+    },
+    "workspace": {
+      "comingSoonTitle": "Project workspace",
+      "comingSoonBody": "This project's workspace tabs (Overview, Requirements, Stack, and more) ship in a later phase."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "appearance": {
+      "heading": "Appearance",
+      "theme": {
+        "label": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "Match system"
+      }
+    },
+    "language": {
+      "heading": "Language",
+      "uiLabel": "Interface language",
+      "outputLabel": "Generated package language",
+      "outputHelp": "Independent from the interface language. Used when a project package is generated."
+    },
+    "defaults": {
+      "heading": "Project defaults",
+      "note": "Applied automatically when you create a new project, and can be changed per-project in the wizard.",
+      "experienceProfile": {
+        "label": "Default experience profile",
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced",
+        "team": "Team"
+      },
+      "selectionMode": {
+        "label": "Default selection mode",
+        "automatic": "Automatic",
+        "guided": "Guided",
+        "manual": "Manual"
+      },
+      "executionProfile": {
+        "label": "Default execution profile",
+        "economic": "Economic",
+        "balanced": "Balanced",
+        "comprehensive": "Comprehensive"
+      },
+      "autosave": {
+        "label": "Autosave",
+        "help": "Applies to a project's details, requirements, and configuration while you're editing it."
+      }
+    },
+    "ai": {
+      "heading": "AI assistance",
+      "enableLabel": "Enable optional AI assistance",
+      "help": "Enabling this only stores your preference and consent — it does not send any request by itself. Once enabled, you can start an AI analysis from a project's \"AI analysis\" page, where you'll see a fresh, explicit notice and send action before anything is transmitted.",
+      "whatEnablingDoesHeading": "What enabling this does",
+      "howItWorksHeading": "How it works",
+      "consentNotice": "Enabling this lets you start an AI analysis from a project's AI analysis page, where a structured project brief is sent — only after a fresh, explicit send action there — to a server-side function that forwards it to the Claude API. No project data is sent automatically, and AI suggestions are always reviewed proposals you accept or reject, never automatic changes. Checking the box below is your consent to this behavior; you can withdraw it at any time by unchecking it.",
+      "consentAcceptedAt": "Consent recorded at {{date}}"
+    },
+    "localData": {
+      "heading": "Local data",
+      "dangerZoneHeading": "Danger zone",
+      "export": {
+        "label": "Export local data",
+        "description": "Download a JSON snapshot of everything DevFlow has stored on this device."
+      },
+      "reset": {
+        "label": "Reset settings to defaults",
+        "description": "Restore every setting above to its default value.",
+        "confirmTitle": "Reset settings to defaults?",
+        "confirmBody": "This restores theme, language, defaults, and AI/local-data preferences to their defaults. You can undo this immediately after.",
+        "undo": "Undo"
+      },
+      "clear": {
+        "label": "Clear all local DevFlow data",
+        "description": "Erase everything DevFlow has stored on this device (this browser only). Nothing outside DevFlow's storage is touched.",
+        "confirmTitle": "Clear all local DevFlow data?",
+        "confirmBody": "This permanently erases all DevFlow data stored in this browser. A backup file downloads automatically first so you can keep a copy.",
+        "exportedNotice": "A backup was downloaded before clearing."
+      }
+    }
+  },
+  "wizard": {
+    "stepRailLabel": "Wizard steps",
+    "stepHasError": "Incomplete",
+    "stepComplete": "Complete",
+    "stepProgress": "Step {{current}} of {{total}}",
+    "steps": {
+      "identity": "Identity and brief",
+      "profile": "Experience profile",
+      "domains": "Domains",
+      "platformsScope": "Platforms and scope",
+      "functionalRequirements": "Functional requirements",
+      "dataIntegrations": "Data, integrations, and constraints",
+      "qualitySecurity": "Quality, security, and deployment",
+      "selectionExecution": "Selection and execution profiles",
+      "recommendations": "Recommendations and manual catalog",
+      "review": "Review and configure"
+    },
+    "actions": {
+      "back": "Back",
+      "saveAndExit": "Save and exit",
+      "continue": "Continue"
+    },
+    "identity": {
+      "description": "The project's name and brief, editable at any time."
+    },
+    "profile": {
+      "description": "Choose the experience profile that fits you. This changes explanation depth, default recommendation scope, and advanced-control visibility.",
+      "summary": {
+        "beginner": "Extra guidance, fewer advanced controls, a smaller default agent/skill set.",
+        "intermediate": "Balanced guidance with a moderate default agent/skill set.",
+        "advanced": "Minimal guidance, advanced controls visible, manual selection by default.",
+        "team": "Guided for a team, advanced controls visible, a broader default agent/skill set."
+      },
+      "limits": "Targets up to {{agents}} agents and {{skills}} skills once recommendations are available."
+    },
+    "domains": {
+      "description": "Select every domain that applies to this project, or add your own.",
+      "systemHeading": "Domains",
+      "customHeading": "Custom domains",
+      "customLabelInput": "Custom domain name",
+      "customLabelPlaceholder": "e.g. 3D Printing Software",
+      "addCustomAction": "Add domain",
+      "removeCustom": "Remove {{label}}",
+      "emptyError": "Select at least one domain, or add a custom one.",
+      "removeConfirmTitle": "Remove \"{{label}}\"?",
+      "removeConfirmBody": "This domain will be removed. Nothing else you entered is affected.",
+      "removeConfirmBodyWithImpact": "This domain will be removed, along with these domain-specific answers: {{list}}. Everything else you entered is unaffected.",
+      "removeConfirmAction": "Remove domain"
+    },
+    "platformsScope": {
+      "description": "Target platforms, scale, connectivity, user model, and data sensitivity.",
+      "platformsLabel": "Target platforms",
+      "platformsPlaceholder": "Type a platform and press Enter",
+      "scaleLabel": "Project scale",
+      "scale": {
+        "prototype": "Prototype",
+        "mvp": "MVP",
+        "standard": "Standard",
+        "enterprise": "Enterprise"
+      },
+      "connectivityLabel": "Connectivity",
+      "connectivity": {
+        "online": "Online",
+        "offline": "Offline",
+        "hybrid": "Hybrid"
+      },
+      "userModelLabel": "User model",
+      "userModel": {
+        "single": "Single user",
+        "multi": "Multi user"
+      },
+      "dataSensitivityLabel": "Data sensitivity",
+      "dataSensitivityPlaceholder": "Type a data category and press Enter"
+    },
+    "dataIntegrations": {
+      "description": "Target users, goals, success measures, constraints, capabilities, and forbidden technologies.",
+      "targetUsersLabel": "Target users",
+      "goalsLabel": "Goals",
+      "successMeasuresLabel": "Success measures",
+      "constraintsLabel": "Constraints",
+      "capabilitiesLabel": "Enabled capabilities",
+      "forbiddenLabel": "Forbidden technologies",
+      "conditionalHeading": "Based on your selected domains",
+      "conditionalPrompt": {
+        "mobileDistribution": "Consider app-store distribution for your mobile domain.",
+        "mobilePush": "Consider push notifications for your mobile domain.",
+        "backendRequestScale": "Consider the expected request scale for your backend/API domain.",
+        "cloudRequestScale": "Consider the expected request scale for your cloud/DevOps domain.",
+        "gameEngineIntegration": "Consider which game engine this project integrates with."
+      }
+    },
+    "functionalRequirements": {
+      "description": "Add, edit, prioritize, and remove functional requirements."
+    },
+    "qualitySecurity": {
+      "description": "Add, edit, prioritize, and remove quality, security, and deployment requirements and constraints."
+    },
+    "selectionExecution": {
+      "description": "Selection mode and execution profile are independent settings.",
+      "selectionModeLabel": "Selection mode",
+      "executionProfileLabel": "Execution profile",
+      "automaticNote": "In automatic mode, the Recommendations step pre-checks required/recommended items for you, but you still review and confirm before they're saved to the project."
+    },
+    "recommendations": {
+      "modeNote": {
+        "automatic": "Automatic mode pre-suggests required and recommended items below. Nothing is saved until you accept it.",
+        "guided": "Guided mode shows required, recommended, and alternative items. Review and accept the ones you want.",
+        "manual": "Manual mode only shows required items and validation warnings. Use search below to add anything else yourself."
+      },
+      "scoreLabel": "Score {{score}}",
+      "missingDependency": "Missing dependency: {{ids}}",
+      "acceptAction": "Accept",
+      "removeAction": "Remove",
+      "restoreAction": "Restore",
+      "addAction": "Add",
+      "pendingSuggestedCount": "{{count}} suggested item(s) not yet added.",
+      "acceptAllAction": "Accept all suggested",
+      "requiredHeading": "Required",
+      "recommendedHeading": "Recommended",
+      "alternativesHeading": "Alternatives",
+      "noneYet": "Nothing here yet for your current configuration.",
+      "manualAddHeading": "Search the catalog",
+      "manualSearchLabel": "Search by name",
+      "customAddHeading": "Add a custom item",
+      "customNameLabel": "Name",
+      "customKindLabel": "Kind",
+      "addCustomAction": "Add custom item",
+      "validationHeading": "Validation",
+      "validationOk": "No issues block package export.",
+      "validationBlocked": "One or more issues currently block package export.",
+      "noIssues": "No validation issues.",
+      "severity": {
+        "info": "Info",
+        "warning": "Warning",
+        "error": "Error",
+        "blocker": "Blocker"
+      },
+      "acknowledgeReasonPlaceholder": "Reason for acknowledging",
+      "acknowledgeAction": "Acknowledge",
+      "acknowledged": "Acknowledged: {{reason}}"
+    },
+    "requirements": {
+      "emptyTitle": "No requirements yet",
+      "emptyBody": "Add your first requirement below.",
+      "priorityLabel": "Priority",
+      "editAction": "Edit",
+      "removeAction": "Remove",
+      "editHeading": "Edit requirement",
+      "addHeading": "Add a requirement",
+      "typeLabel": "Type",
+      "type": {
+        "functional": "Functional",
+        "non-functional": "Non-functional",
+        "constraint": "Constraint"
+      },
+      "titleLabel": "Title",
+      "descriptionLabel": "Description",
+      "priority": {
+        "must": "Must",
+        "should": "Should",
+        "could": "Could",
+        "wont": "Won't"
+      },
+      "saveAction": "Save changes",
+      "addAction": "Add requirement",
+      "removeConfirmTitle": "Remove \"{{title}}\"?",
+      "removeConfirmBody": "This cannot be undone from here, but you can add it again."
+    },
+    "review": {
+      "description": "Review your configuration before marking it complete.",
+      "nameLabel": "Name",
+      "profileLabel": "Experience profile",
+      "domainsLabel": "Domains",
+      "none": "None",
+      "requirementsLabel": "Requirements",
+      "requirementsCount": "{{count}} requirement(s)",
+      "incompleteHeading": "These sections need attention before you can configure:",
+      "readyNotice": "Every section is complete. You can mark this project configured.",
+      "editSection": "Edit {{section}}",
+      "markConfiguredAction": "Mark configured"
+    }
+  }
+}

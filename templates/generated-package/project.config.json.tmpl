@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "{{PROJECT_NAME}}",
+    "owner": "{{OWNER}}",
+    "experienceProfile": "{{EXPERIENCE_PROFILE}}",
+    "selectionMode": "{{SELECTION_MODE}}",
+    "executionProfile": "{{EXECUTION_PROFILE}}",
+    "outputLanguage": "{{OUTPUT_LANGUAGE}}",
+    "domainIds": {{DOMAIN_IDS_JSON}},
+    "targetPlatforms": {{TARGET_PLATFORMS_JSON}}
+  },
+  "catalogVersion": "{{CATALOG_VERSION}}",
+  "ruleSetVersion": "{{RULE_SET_VERSION}}",
+  "selectedItemIds": {{SELECTED_ITEM_IDS_JSON}},
+  "approvals": {
+    "beforeCommit": true,
+    "beforePush": true,
+    "beforeDeploy": true,
+    "beforePaidApi": true,
+    "beforeDataDeletion": true,
+    "beforeExternalWrite": true,
+    "beforeHooksOrMcp": true
+  }
+}
