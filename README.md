@@ -4,6 +4,10 @@ DevFlow Studio is a local-first web application that helps developers plan a sof
 
 DevFlow Studio follows a local-first, deterministic-first architecture that keeps core project-planning workflows explainable and independent of external services. AI assistance is entirely optional and off by default.
 
+## Live Demo
+
+[Open DevFlow Studio](https://devflow-studio-app.netlify.app)
+
 ## Key features
 
 - **Project workspace** — create, list, update, and (soft-)delete projects, each holding requirements, selections, and generated packages.
