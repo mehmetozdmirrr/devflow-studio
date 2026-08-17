@@ -2,7 +2,7 @@
 
 DevFlow Studio is a local-first web application that helps developers plan a software project: it collects requirements, recommends a technology stack deterministically, lets you compare catalog options, and generates a downloadable starter package — all without a backend or user account.
 
-Built as a course/portfolio project with a strict local-first, deterministic-first architecture. AI assistance is entirely optional and off by default.
+DevFlow Studio follows a local-first, deterministic-first architecture that keeps core project-planning workflows explainable and independent of external services. AI assistance is entirely optional and off by default.
 
 ## Key features
 
@@ -44,7 +44,7 @@ The application follows a layered, ports-and-adapters style structure inside `ap
 | Pages / Components | `app/src/pages/`, `app/src/components/` | React UI |
 | Catalog | `app/src/catalog/` | Built-in technology catalog and recommendation rules data |
 
-Shared, implementation-neutral contracts (entity and boundary types, plus JSON Schemas) live in `contracts/` at the repository root and are referenced by the app. There is no separate `interfaces/` folder — `contracts/types/` defines the shared type contracts and `app/src/ports/` defines the architectural interface boundaries between the application and its storage/service adapters.
+Shared, implementation-neutral contracts and JSON Schemas live in `contracts/` at the repository root. `contracts/types/` defines shared application contracts, while `app/src/ports/` defines the repository and service interfaces used between the application and its adapters.
 
 ## Installation
 
@@ -81,14 +81,16 @@ npm --prefix netlify/functions run typecheck
 npm --prefix netlify/functions run test
 ```
 
-## Project CRUD
+## Project Management
 
-- **Create** — `ProjectCreatePage` / wizard flow creates a new project record.
-- **List** — `ProjectsPage` lists all saved projects.
-- **Update** — `ProjectOverviewPage`, the wizard, and settings update a project's requirements, selections, and metadata.
-- **Delete** — projects are moved to `TrashPage` (soft delete) before permanent removal.
+DevFlow Studio provides a complete project-management workflow:
 
-All CRUD operations persist through `app/src/ports/projectRepository.ts`, implemented by `app/src/adapters/localStorageProjectAdapter.ts`.
+- **Create** new projects from a structured project brief.
+- **Browse and list** locally stored projects from the Projects workspace.
+- **Update** project details, requirements, configuration, and technology selections.
+- **Delete** projects by moving them to trash, with support for restoration or permanent removal.
+
+Project data is persisted through `app/src/ports/projectRepository.ts`, implemented by `app/src/adapters/localStorageProjectAdapter.ts`.
 
 ## LocalStorage usage
 
@@ -133,36 +135,43 @@ UI strings are translated for English (`en.json`) and Turkish (`tr.json`) under 
 | `ALLOWED_ORIGIN` | Yes, to enable AI | Exact origin allowed to call the endpoint |
 
 If these are unset, the function returns `AI_DISABLED` and the app continues to work fully in its deterministic, local-only mode.
-
 ## Screenshots
 
-The screenshots below highlight the main application workflows and project-management features.
+### Landing — Product overview
 
-| Landing | Projects | Project overview |
-| --- | --- | --- |
-| ![Landing](screenshots/landing.png) | ![Projects](screenshots/projects.png) | ![Project overview](screenshots/project-overview.png) |
+The landing page introduces the DevFlow Studio workflow, from defining a project brief and requirements to reviewing recommendations, validating the configuration, and generating a starter package.
 
-| Wizard | Catalog | Package preview |
-| --- | --- | --- |
-| ![Wizard](screenshots/wizard.png) | ![Catalog](screenshots/catalog.png) | ![Package preview](screenshots/package-preview.png) |
+![Landing](screenshots/landing.png)
 
-## Course compliance
+### Projects — Project management
 
-| Requirement | Status | Where |
-| --- | --- | --- |
-| Modern JavaScript framework | Done | React 19 + Vite, TypeScript (`app/`) |
-| Components | Done | `app/src/components/` |
-| Pages | Done | `app/src/pages/` |
-| Interfaces / architectural equivalent | Done | `contracts/types/` (shared type contracts) + `app/src/ports/` (repository/service interface boundaries) |
-| Tailwind CSS | Done | `@tailwindcss/vite` plugin in `app/vite.config.ts`, imported in `app/src/styles/index.css` |
-| Create | Done | Project creation flow |
-| List | Done | `ProjectsPage` |
-| Update | Done | Project overview / wizard / settings |
-| Delete | Done | Soft delete via `TrashPage` |
-| LocalStorage | Done | `app/src/adapters/localStorage*Adapter.ts` |
-| Screenshots | Included — six application screenshots |
-| Public GitHub repository | This repository |
-| Deployed frontend | Netlify-ready — live URL will be added after deployment |
+The Projects workspace provides the central project-management experience. Projects can be created, opened, searched, sorted, cloned, archived, or moved to trash while remaining stored locally in the browser.
+
+![Projects](screenshots/projects.png)
+
+### Project Overview — Editing and validation
+
+The Project Overview brings project details, requirements, selections, workflow actions, and validation status into a single workspace.
+
+![Project overview](screenshots/project-overview.png)
+
+### Wizard — Guided configuration
+
+The multi-step configuration wizard guides a project through domains, platforms, requirements, execution preferences, recommendations, and final review while keeping progress and validation states visible.
+
+![Wizard](screenshots/wizard.png)
+
+### Catalog — Search, inspect, and compare
+
+The Catalog provides searchable and filterable technology, agent, skill, and template entries. Items can be inspected in detail, compared with alternatives, cloned as custom entries, or added to a project.
+
+![Catalog](screenshots/catalog.png)
+
+### Package Preview — Generated starter package
+
+The Package Preview shows the generated starter package before export. Files are grouped by path and can be inspected, edited, excluded where permitted, or downloaded individually, while the complete package can be exported in multiple formats.
+
+![Package preview](screenshots/package-preview.png)
 
 ## License
 
