@@ -5,7 +5,7 @@ import {
   buildErrorEnvelope,
   mapProviderOutputToResult,
   validateAnalysisRequest,
-} from "./validation";
+} from "./functions/analyze-project/validation";
 
 function validRequestBody() {
   return {

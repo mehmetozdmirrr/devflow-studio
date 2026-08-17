@@ -77,8 +77,8 @@ npm --prefix app run lint
 The optional Netlify Function package has its own checks:
 
 ```bash
-npm --prefix netlify/functions run typecheck
-npm --prefix netlify/functions run test
+npm --prefix netlify run typecheck
+npm --prefix netlify run test
 ```
 
 ## Project Management

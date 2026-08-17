@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import handleDefault, { handleAnalyzeRequest, type AnalysisProvider, type HandlerDeps } from "./analyze-project";
+import handleDefault, {
+  handleAnalyzeRequest,
+  type AnalysisProvider,
+  type HandlerDeps,
+} from "./functions/analyze-project/index";
 
 function validRequestBody() {
   return {
